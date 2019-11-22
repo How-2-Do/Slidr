@@ -57,7 +57,7 @@ final class ScrimRenderer {
                 dirtyRect.set(decorView.getRight(), 0, rootView.getMeasuredWidth(), rootView.getMeasuredHeight());
                 break;
             case TOP:
-                dirtyRect.set(0, 0, rootView.getMeasuredWidth(), decorView.getTop() + maxStatusBarHeight);
+                dirtyRect.set(0, 0, rootView.getMeasuredWidth(), decorView.getTop());
                 break;
             case BOTTOM:
                 dirtyRect.set(0, decorView.getBottom(), rootView.getMeasuredWidth(), rootView.getMeasuredHeight());
@@ -94,7 +94,7 @@ final class ScrimRenderer {
 
 
     private void renderTop(Canvas canvas, Paint paint) {
-        canvas.drawRect(0, 0, rootView.getMeasuredWidth(), decorView.getTop(), paint);
+        canvas.drawRect(0, 0, rootView.getMeasuredWidth(), decorView.getTop() + maxStatusBarHeight, paint);
     }
 
 
