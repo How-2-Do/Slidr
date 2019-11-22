@@ -15,7 +15,7 @@ final class ScrimRenderer {
     private final View rootView;
     private final View decorView;
     private final Rect dirtyRect;
-
+    private final int maxStatusBarHeight = 200;
 
     ScrimRenderer(@NonNull View rootView, @NonNull View decorView) {
         this.rootView = rootView;
@@ -57,7 +57,7 @@ final class ScrimRenderer {
                 dirtyRect.set(decorView.getRight(), 0, rootView.getMeasuredWidth(), rootView.getMeasuredHeight());
                 break;
             case TOP:
-                dirtyRect.set(0, 0, rootView.getMeasuredWidth(), decorView.getTop());
+                dirtyRect.set(0, 0, rootView.getMeasuredWidth(), decorView.getTop() + maxStatusBarHeight);
                 break;
             case BOTTOM:
                 dirtyRect.set(0, decorView.getBottom(), rootView.getMeasuredWidth(), rootView.getMeasuredHeight());

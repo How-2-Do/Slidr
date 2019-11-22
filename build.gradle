@@ -25,7 +25,7 @@ ext {
 	//Support and Build tools version
     compileSdk = 28
     targetSdk = 28
-    minSdk = 19
+    minSdk = 21
     ftKit = '0.6.0'
 
 	//Support Libraries dependencies
